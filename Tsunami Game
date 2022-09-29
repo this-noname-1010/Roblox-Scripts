@@ -1,0 +1,59 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Robojini/Tuturial_UI_Library/main/UI_Template_1"))()
+
+local Window = Library.CreateLib("Tsunami Game (V1.24C)", "RJTheme1")
+
+local Tab = Window:NewTab("Game")
+
+local Tab2 = Window:NewTab("Player")
+
+local Section = Tab:NewSection("Coins")
+
+local Section3 = Tab:NewSection("Delets")
+
+local Section2 = Tab2:NewSection("Stats")
+
+Section:NewButton("Steal all coins", "Teleport all coins to you", function()
+    for i,v in pairs(game:GetDescendants()) do
+    if v.Name == 'CoinCollision' then
+    v.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+    end
+    end
+end)
+
+Section3:NewButton("Delete tsunami from game", "Delete tsunami from game", function()
+    for i,v in pairs(game:GetDescendants()) do
+    if v.Name == 'ActiveTsunamis' then
+    v:Destroy()
+    end
+    end
+end)
+
+Section3:NewButton("Delete sounds from game", "Delete sounds from game", function()
+    game:GetService("Workspace").ScriptImportance.SirenModel.SirenSoundPart.SirenSound:Destroy()
+    game:GetService("Workspace").ScriptImportance.SirenModel.SirenSoundPart.Level6Sound:Destroy()
+end)
+
+Section2:NewButton("Reset JP and WS", "Super JumpPower and WalkSpeed", function()
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+end)
+
+Section2:NewButton("Super hero", "Super JumpPower and WalkSpeed", function()
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 130
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = 220
+end)
+
+Section2:NewButton("Super super super hero", "Super super super JumpPower and WalkSpeed", function()
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 390
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = 660
+end)
+
+Section2:NewButton("Flash", "Super WalkSpeed", function()
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 200
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+end)
+
+Section2:NewButton("Super flash", "Super super WalkSpeed", function()
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 500
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+end)
