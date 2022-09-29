@@ -1,0 +1,3 @@
+if game.PlaceId == 7993293100 then -- https://www.roblox.com/games/7993293100/Tsunami-Game
+loadstring(game:HttpGet("https://raw.githubusercontent.com/this-noname-1010/Roblox-Scripts/main/Tsunami%20Game"))()
+end
